@@ -75,7 +75,7 @@ def safe_corr(x: pd.Series, y: pd.Series) -> float:
 
 df_raw = load_and_process_data(DATA_PATH)
 
-# ---------------- SIDEBAR USER CAPABILITIES ----------------
+# SIDEBAR USER CAPABILITIES
 st.sidebar.header("Filter Controls")
 
 quality_options = ["Low", "Medium", "High"]
@@ -134,7 +134,7 @@ elif isinstance(selected_dates, (tuple, list)) and len(selected_dates) == 1:
 st.sidebar.markdown("---")
 st.sidebar.write(f"Active Records: {len(df):,} / {len(df_raw):,}")
 
-# ---------------- MAIN HEADER & KPI SCORECARDS ----------------
+# MAIN HEADER & KPI SCORECARDS
 st.title("Impact of 6G Network Performance on Manufacturing Efficiency")
 st.caption("Thales Group Smart Factory Connectivity & Production Diagnostics")
 
@@ -184,7 +184,7 @@ st.markdown("---")
 lat_order = ["Real-Time (<15ms)", "Moderate (15-35ms)", "Delayed (>35ms)"]
 pkt_order = ["Low (<1.5%)", "Moderate (1.5-3.5%)", "Spike (>3.5%)"]
 
-# ---------------- 4 DASHBOARD MODULES (TABS) ----------------
+# 4 DASHBOARD MODULES (TABS)
 tab1, tab2, tab3, tab4 = st.tabs([
     "1. Network Performance Overview",
     "2. Network vs Efficiency Dashboard",
